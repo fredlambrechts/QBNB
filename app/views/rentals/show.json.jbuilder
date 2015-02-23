@@ -1,0 +1,1 @@
+json.extract! @rental, :id, :host_id, :name, :address_street, :address_number, :address_city, :address_country, :address_zip, :rental_type, :number_of_sleeps, :price_per_night, :description, :created_at, :updated_at

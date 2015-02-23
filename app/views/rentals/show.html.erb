@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Host:</strong>
+  <%= @rental.host_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @rental.name %>
+</p>
+
+<p>
+  <strong>Address street:</strong>
+  <%= @rental.address_street %>
+</p>
+
+<p>
+  <strong>Address number:</strong>
+  <%= @rental.address_number %>
+</p>
+
+<p>
+  <strong>Address city:</strong>
+  <%= @rental.address_city %>
+</p>
+
+<p>
+  <strong>Address country:</strong>
+  <%= @rental.address_country %>
+</p>
+
+<p>
+  <strong>Address zip:</strong>
+  <%= @rental.address_zip %>
+</p>
+
+<p>
+  <strong>Rental type:</strong>
+  <%= @rental.rental_type %>
+</p>
+
+<p>
+  <strong>Number of sleeps:</strong>
+  <%= @rental.number_of_sleeps %>
+</p>
+
+<p>
+  <strong>Price per night:</strong>
+  <%= @rental.price_per_night %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @rental.description %>
+</p>
+
+<%= link_to 'Edit', edit_rental_path(@rental) %> |
+<%= link_to 'Back', rentals_path %>
