@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  get 'users/index'
+
   devise_for :users
   resources :rentals
+  get :users, to: "users#index"
   root to: "welcome#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
