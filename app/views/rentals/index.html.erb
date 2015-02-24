@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th></th>
       <th>Host</th>
       <th>Name</th>
       <th>Address street</th>
@@ -23,6 +24,7 @@
   <tbody>
     <% @rentals.each do |r| %>
       <tr>
+        <td><%= image_tag r.picture.url(:medium) %></td>
         <td><%= r.host_id %></td>
         <td><%= r.name %></td>
         <td><%= r.address_street %></td>
