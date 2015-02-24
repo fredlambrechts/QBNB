@@ -21,22 +21,22 @@
   </thead>
 
   <tbody>
-    <% @rentals.each do |rental| %>
+    <% @rentals.each do |r| %>
       <tr>
-        <td><%= rental.host_id %></td>
-        <td><%= rental.name %></td>
-        <td><%= rental.address_street %></td>
-        <td><%= rental.address_number %></td>
-        <td><%= rental.address_city %></td>
-        <td><%= rental.address_country %></td>
-        <td><%= rental.address_zip %></td>
-        <td><%= rental.rental_type %></td>
-        <td><%= rental.number_of_sleeps %></td>
-        <td><%= rental.price_per_night %></td>
-        <td><%= rental.description %></td>
-        <td><%= link_to 'Show', rental %></td>
-        <td><%= link_to 'Edit', edit_rental_path(rental) %></td>
-        <td><%= link_to 'Destroy', rental, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= r.host_id %></td>
+        <td><%= r.name %></td>
+        <td><%= r.address_street %></td>
+        <td><%= r.address_number %></td>
+        <td><%= r.address_city %></td>
+        <td><%= r.address_country %></td>
+        <td><%= r.address_zip %></td>
+        <td><%= r.rental_type %></td>
+        <td><%= r.number_of_sleeps %></td>
+        <td><%= r.price_per_night %></td>
+        <td><%= r.description %></td>
+        <td><%= link_to 'Show', r %></td>
+        <td><%= link_to 'Edit', edit_rental_path(r) %></td>
+        <td><%= link_to 'Destroy', r, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
