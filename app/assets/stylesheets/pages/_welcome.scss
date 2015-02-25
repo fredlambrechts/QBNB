@@ -5,7 +5,7 @@
   background-color: #EDEFED;
   .container-fluid {
     background-image: url('http://lorempixel.com/1300/600/city/');
-    margin: -80px 0px 0px 0px;
+    margin: -100px 0px 0px 0px;
   }
 
   .welcome-header {
@@ -71,10 +71,11 @@
       img {
         width: 350px
       }
-      .text-on-pic {
+      .text-on-picture {
         position: absolute;
+        margin-top: 100px;
         top: 5%;
-        left: 35%;
+        left: 30%;
         color: white;
         font-size: 25px;
         text-decoration: overline;
