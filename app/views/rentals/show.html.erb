@@ -1,62 +1,78 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Host:</strong>
-  <%= @rental.host_id %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @rental.name %>
-</p>
-
-<p>
-  <strong>Address street:</strong>
-  <%= @rental.address_street %>
-</p>
-
-<p>
-  <strong>Address number:</strong>
-  <%= @rental.address_number %>
-</p>
-
-<p>
-  <strong>Address city:</strong>
-  <%= @rental.address_city %>
-</p>
-
-<p>
-  <strong>Address country:</strong>
-  <%= @rental.address_country %>
-</p>
-
-<p>
-  <strong>Address zip:</strong>
-  <%= @rental.address_zip %>
-</p>
-
-<p>
-  <strong>Rental type:</strong>
-  <%= @rental.rental_type %>
-</p>
-
-<p>
-  <strong>Number of sleeps:</strong>
-  <%= @rental.number_of_sleeps %>
-</p>
-
-<p>
-  <strong>Price per night:</strong>
-  <%= @rental.price_per_night %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @rental.description %>
-</p>
-<p>
-  <%= image_tag @rental.picture.url(:medium) %>
-</p>
-
-<%= link_to 'Edit', edit_rental_path(@rental) %> |
-<%= link_to 'Back', rentals_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+      <div class="image-container">
+        <p>
+          <strong>Name:</strong>
+          <%= @rental.name %>
+        </p>
+        <%= image_tag "livingroom.jpg", class:'img-responsive' %>
+      </div>
+      <%= render "navbar_show" %>
+      <div class="photos row">
+        <div class="img col-md-4">
+          <p>
+            <%= image_tag @rental.picture.url(:medium), class:'img-responsive' %>
+          </p>
+        </div>
+        <div class="col-md-4">
+          <p>
+            <%= image_tag @rental.picture.url(:medium), class:'img-responsive' %>
+          </p>
+        </div>
+        <div class="col-md-4">
+          <p>
+            <%= image_tag @rental.picture.url(:medium), class:'img-responsive' %>
+          </p>
+        </div>
+      </div>
+      <div class="about-rental row">
+        <p>
+          <strong>Name:</strong>
+          <%= @rental.name %>
+        </p>
+        <p>
+          <strong>Rental type:</strong>
+          <%= @rental.rental_type %>
+        </p>
+        <p>
+          <strong>Number of sleeps:</strong>
+          <%= @rental.number_of_sleeps %>
+        </p>
+        <p>
+          <strong>Price per night:</strong>
+          <%= @rental.price_per_night %>
+        </p>
+        <p>
+          <strong>Description:</strong>
+          <%= @rental.description %>
+        </p>
+      </div>
+      <div class="reviews row">
+        No reviews so far ;)
+      </div>
+      <div class="about-host row">
+        <p>
+          <strong>Host:</strong>
+          <%= @rental.host_id %>
+        </p>
+      </div>
+      <div class="address row">
+        <p>
+          <strong>Address:</strong>
+          <%= @rental.address_street %>, <%= @rental.address_number %> <br>
+          <%= @rental.address_zip %> <%= @rental.address_city %> <br>
+          <%= @rental.address_country %>
+        </p>
+      </div>
+    </div>
+    <div class="col-md-2">
+    </div>
+  </div>
+  <div class="row text-center">
+    <%= link_to 'Back', rentals_path, class:'btn' %>
+  </div>
+</div>
