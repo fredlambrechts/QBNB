@@ -1,0 +1,29 @@
+<div class="search-box-container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2 search-box">
+      <%= form_tag flats_path, class: "form-inline center" do %>
+        <input type="hidden" id="location_select" class="input-xlarge" />
+        <div class='input-group date' id='arrival_date_picker' name="search[arrival]">
+          <input type='text' class="form-control"/>
+          <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+        </div>
+        <div class='input-group date' id='depart_date_picker' name="search[arrival]">
+          <input type='text' class="form-control"/>
+          <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+        </div>
+        <select class="selectpicker show-tick">
+          <% (1..16).each do |guest| %>
+            <% if guest == 1 %>
+              <option value="<%= guest %>"><%= guest %> Guest</option>
+            <% elsif guest == 16 %>
+              <option value="<%= guest %>">+<%= guest %> Guests</option>
+            <% else %>
+              <option value="<%= guest %>"><%= guest %> Guests</option>
+            <% end %>
+          <% end %>
+        </select>
+        <%= submit_tag "Search", class: "btn btn-danger btn-search", id: "btn-search"%>
+      <% end %>
+    </div>
+  </div>
+</div>
