@@ -4,7 +4,21 @@ class RentalsController < ApplicationController
   # GET /rentals
   # GET /rentals.json
   def index
-    @rentals = Rental.all
+    search_houses = params[:house]
+    search_appts = params[:appt]
+
+
+    # unless search_appts || search_houses
+    #    @rentals = Rental.all
+    # end
+
+    if search_appts && !search_houses
+      @rentals = Rental.appts
+    elsif !search_appts && search_houses
+      @rentals = Rental.houses
+    else
+      @rentals = Rental.all
+    end
   end
 
   # GET /rentals/1
@@ -71,4 +85,5 @@ class RentalsController < ApplicationController
     def rental_params
       params.require(:rental).permit(:host_id, :name, :address_street, :address_number, :address_city, :address_country, :address_zip, :rental_type, :number_of_sleeps, :price_per_night, :description, :picture)
     end
+
 end
