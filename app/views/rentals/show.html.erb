@@ -1,49 +1,57 @@
 <p id="notice"><%= notice %></p>
+<div class="image-container">
+<img src="livingroom.jpg" alt="Room">
+</div>
+<%= render "navbar_show" %>
+<div class="rental-container">
+  <p>
+    <strong>Host:</strong>
+    <%= @rental.host_id %>
+  </p>
 
-<p>
-  <strong>Host:</strong>
-  <%= @rental.host_id %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= @rental.name %>
+  </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @rental.name %>
-</p>
+  <p>
+    <strong>Address street:</strong>
+     <%= @rental.address_street %>
+  </p>
 
-<p>
-  <strong>Address street:</strong>
-  <%= @rental.address_street %>
-</p>
+  <p>
+    <strong>Address number:</strong>
+    <%= @rental.address_number %>
+  </p>
 
-<p>
-  <strong>Address number:</strong>
-  <%= @rental.address_number %>
-</p>
+  <p>
+    <strong>Address city:</strong>
+    <%= @rental.address_city %>
+  </p>
 
-<p>
-  <strong>Address city:</strong>
-  <%= @rental.address_city %>
-</p>
+  <p>
+    <strong>Address country:</strong>
+    <%= @rental.address_country %>
+  </p>
 
-<p>
-  <strong>Address country:</strong>
-  <%= @rental.address_country %>
-</p>
+  <p>
+    <strong>Address zip:</strong>
+     <%= @rental.address_zip %>
+  </p>
 
-<p>
-  <strong>Address zip:</strong>
-  <%= @rental.address_zip %>
-</p>
+  <p>
+    <strong>Rental type:</strong>
+    <%= @rental.rental_type %>
+  </p>
 
-<p>
-  <strong>Rental type:</strong>
-  <%= @rental.rental_type %>
-</p>
+</div>
+<div class= "search-container">
 
-<p>
-  <strong>Number of sleeps:</strong>
-  <%= @rental.number_of_sleeps %>
-</p>
+<div id= "sleeps">
+  <p>
+     <strong>Number of sleeps:</strong>
+    <%= @rental.number_of_sleeps %>
+  </p>
 
 <p>
   <strong>Price per night:</strong>

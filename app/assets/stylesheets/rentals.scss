@@ -1,3 +1,43 @@
 // Place all the styles related to the Rentals controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.rental-container {
+  padding-top: 10px;
+  padding-right: 50px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  background-color: white;
+  display: inline;
+  }
+
+.image-container{
+height: 650px;
+background-image: url('coolroom.jpg');
+margin: 0px;
+vertical-align: top;
+background-size: cover;
+}
+
+.navbar-navbar-default-navbar-wagon{
+  margin-bottom: 0px;
+}
+.search-box-container {
+  padding: 20px;
+  height: 70px;
+  background-color: #696969;
+  opacity: 0.9;
+  .search-box {
+    .btn {
+      width: 100px;
+      opacity: 0.8;
+    }
+    .date {
+      width: 140px;
+    }
+    .selectpicker {
+      width: 150px;
+    }
+  }
+}

@@ -7,12 +7,12 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-100.times do
+100.times do |t|
   pw = "Naike1980"
   u = User.new(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
-    email: Faker::Internet.free_email,
+    email: "#{t}thisisastring@gmail.com",
     password: pw,
     password_confirmation: pw)
   u.save!(:validate => false)
