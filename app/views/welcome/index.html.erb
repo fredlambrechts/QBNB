@@ -1,10 +1,34 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
 
-<% if user_signed_in? %>
-  Hello <%= current_user.email %>!
-  <%= link_to 'Sign out', destroy_user_session_path, method: 'delete', class: "btn btn-danger" %>
-<% else %>
-  <%= link_to 'Sign up', new_user_registration_path, class: "btn btn-primary" %>
-  <%= link_to 'Sign in', new_user_session_path, class: "btn btn-success" %>
-<% end %>
+<!-- De landingspagina is alleen anders voor user die ingelogd en dit is alleen te zien in de navbar met de naam en de foto van de user. -->
+
+<div class="landingpage-container">
+  <div class="container-fluid">
+    <div class="welcome-header">
+
+      <!-- Header title-->
+      <div class="welcome-header-title">
+        <div class='row'>
+          <div class="title">
+            <p>Welcome home</p>
+          </div>
+          <div class="subtitle">
+            <p>Rent unique places to stay from local hosts in 190+ countries.</p>
+          </div>
+          <div class="how-it-works">
+            <a href="#" class="btn btn-default btn-outline btn-lg">
+            How it works
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Header search box -->
+    <!--    Hier moet de search box geladen worden %> -->
+
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+    <%= render('welcome_browser.html.erb') %>
+  </div>
+

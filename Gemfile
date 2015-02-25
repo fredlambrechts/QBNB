@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.2.0'
 gem 'simple_form', '~> 3.0.0.rc'
-gem 'font-awesome-rails', '4.3.0.0'
+gem 'font-awesome-sass'
 gem 'bootstrap-sass', '3.3.0.0'
 gem 'devise'
 gem 'aws-sdk', '< 2.0'
