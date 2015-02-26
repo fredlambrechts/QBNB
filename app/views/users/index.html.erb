@@ -15,6 +15,7 @@
   <tbody>
     <% @users.each do |u| %>
       <tr>
+        <td><%= image_tag @u.picture.url(:medium) %></td>
         <td><%= u.first_name %></td>
         <td><%= u.last_name %></td>
         <td><%= u.email %></td>
@@ -24,4 +25,3 @@
   </tbody>
 </table>
 
-<br>
