@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  get 'users/index'
 
   devise_for :users, :controllers => { registrations: 'user/registrations' }
 
-  resources :rentals
+  resources :rentals do
+    resources :bookings, except: [:index, :destroy]
+  end
   get :users, to: "users#index"
   # get :users, to: "users#show"
   root to: "welcome#index"

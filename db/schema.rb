@@ -16,6 +16,19 @@ ActiveRecord::Schema.define(version: 20150226105533) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "bookings", force: :cascade do |t|
+    t.integer  "rental_id"
+    t.integer  "visitor_id"
+    t.date     "checkin"
+    t.date     "checkout"
+    t.string   "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "bookings", ["rental_id"], name: "index_bookings_on_rental_id", using: :btree
+  add_index "bookings", ["visitor_id"], name: "index_bookings_on_visitor_id", using: :btree
+
   create_table "rentals", force: :cascade do |t|
     t.integer  "host_id"
     t.string   "name"
@@ -60,4 +73,6 @@ ActiveRecord::Schema.define(version: 20150226105533) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "bookings", "rentals"
+  add_foreign_key "bookings", "users", column: "visitor_id"
 end
