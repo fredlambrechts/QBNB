@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   get 'users/index'
 
-  devise_for :users
+  devise_for :users, :controllers => { registrations: 'user/registrations' }
+
   resources :rentals
   get :users, to: "users#index"
+  # get :users, to: "users#show"
   root to: "welcome#index"
 
   # The priority is based upon order of creation: first created -> highest priority.

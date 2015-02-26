@@ -7,8 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-100.times do
-  pw = "Naike1980"
+40.times do
+  pw = "12345678"
   u = User.new(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
