@@ -4,6 +4,7 @@ gem 'simple_form', '~> 3.0.0.rc'
 gem 'font-awesome-sass'
 gem 'bootstrap-sass', '3.3.0.0'
 gem 'devise'
+gem 'omniauth-facebook'
 gem 'aws-sdk', '< 2.0'
 gem 'rails_12factor', group: :production
 gem 'puma',           group: :production
