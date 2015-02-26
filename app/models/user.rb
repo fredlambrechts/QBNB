@@ -15,7 +15,11 @@ class User < ActiveRecord::Base
   has_many :bookings
 
   def name
-    "#{first_name} #{last_name}"
+    if first_name.present? || last_name.present?
+     "#{first_name} #{last_name}"
+    else
+     email
+    end
   end
 
   private
