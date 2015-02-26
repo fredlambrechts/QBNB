@@ -2,7 +2,7 @@
 <!-- De landingspagina is alleen anders voor user die ingelogd en dit is alleen te zien in de navbar met de naam en de foto van de user. -->
 
 <div class="landingpage-container">
-  <div class="container-fluid">
+  <div class="container-fluid img-responsive">
     <div class="welcome-header">
 
       <!-- Header title-->
@@ -20,9 +20,11 @@
             </a>
           </div>
         </div>
+        <br></br>
+        <%= render('search_box.html.erb') %>
       </div>
-      <!-- Header search box -->
-    <!--    Hier moet de search box geladen worden %> -->
+
+
 
     </div>
   </div>

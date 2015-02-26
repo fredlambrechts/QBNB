@@ -15,6 +15,16 @@ class Rental < ActiveRecord::Base
     where(rental_type: "house")
   end
 
+  def self.search(search_appts, search_houses)
+    if search_appts && !search_houses
+      appts
+    elsif !search_appts && search_houses
+      houses
+    else
+      all
+    end
+  end
+
 # For later: rewrite self selection methods into scopes
   # scope :rental_type, -> (rental_type) { where rental_type: rental_type }
   # scope :location, -> (address_city) { where address_city: address_city }

@@ -4,20 +4,13 @@ class RentalsController < ApplicationController
   # GET /rentals
   # GET /rentals.json
   def index
-    search_houses = params[:house]
-    search_appts = params[:appt]
-
-
-    # unless search_appts || search_houses
-    #    @rentals = Rental.all
-    # end
-
-    if search_appts && !search_houses
-      @rentals = Rental.appts
-    elsif !search_appts && search_houses
-      @rentals = Rental.houses
+    if(params[:adress_city])
+      @rentals = Rental.where(address_city: params[:adress_city])
     else
-      @rentals = Rental.all
+      # search_city = params[:adress_city]
+      search_houses = params[:house]
+      search_appts = params[:appt]
+      @rentals = Rental.search(search_appts, search_houses)
     end
   end
 
