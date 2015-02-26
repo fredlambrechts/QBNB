@@ -10,6 +10,7 @@ gem 'puma',           group: :production
 gem 'paperclip'
 gem 'figaro'
 gem 'faker'
+gem "letter_opener", group: :development
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
