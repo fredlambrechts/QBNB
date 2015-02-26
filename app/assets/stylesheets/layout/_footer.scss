@@ -1,1 +1,97 @@
-// Your footer style
+footer {
+  padding:0.5em;
+  background:#151515;
+  z-index: 9;
+  position: relative;
+}
+footer p.m_14 {
+  color:#767D84;
+  font-size:13px;
+  line-height:1.8em;
+  margin-top: 2em;
+}
+.f_grid1{
+  list-style:none;
+}
+footer .extra-wrap h5 {
+  color: #E5E5E5;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+footer .address{
+  margin-top:1em;
+}
+footer .address p {
+  font-size: 0.85em;
+  line-height: 2em;
+  color:#767D84;
+}
+footer .address p span {
+  color:#767D84;
+  cursor: pointer;
+}
+footer .address i {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #767D84;
+  top: 7px;
+  position: relative;
+}
+footer ul.list1 {
+  float: right;
+  width:40%;
+  padding:0;
+  list-style:none;
+}
+footer ul.list {
+  float: left;
+  width:40%;
+  padding:0;
+  list-style:none;
+}
+footer ul.list li a, footer ul.list1 li a {
+  color: #767D84;
+  line-height: 1.8em;
+
+}
+footer ul.list li a:hover, footer ul.list1 li a:hover {
+  color:#fff;
+}
+
+footer .footer-top{
+  border-bottom:1px solid #3E3E3E;
+  padding-bottom: 20px;
+}
+footer .copy {
+  float: left;
+  margin-top: 5px;
+}
+footer .copy p {
+  font-size: 12px;
+  color: #767D84;
+}
+footer .social {
+  float: right;
+  margin-top: 5px;
+}
+footer .social ul {
+  margin: 0;
+  padding: 0;
+}
+footer .social li {
+  background: none;
+  display: inline-block;
+}
+footer .social li a i {
+  font-size: 20px;
+  color: #999;
+}
+footer .footer_bottom {
+  padding:0.5em 0;
+}
+.footer_grid{
+  padding:1em;
+}
