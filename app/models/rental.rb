@@ -1,5 +1,6 @@
 class Rental < ActiveRecord::Base
 
+  has_many :bookings
   RENTAL_TYPE = ["house","appt"]
   has_attached_file :picture,
     styles: { medium: "300x300>", thumb: "100x100>" }, :default_url => ":style/missing.jpg"

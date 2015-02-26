@@ -32,3 +32,13 @@ end
     price_per_night: rand(30..200),
     description: Faker::Lorem.paragraph(2))
 end
+
+40.times do
+  Booking.create(
+    rental_id: Rental.all.sample.id,
+    visitor_id: User.all.sample.id,
+    checkin: "2015-03-12",
+    checkout: "2015-03-14",
+    status: Booking::STATUS.sample
+    )
+end

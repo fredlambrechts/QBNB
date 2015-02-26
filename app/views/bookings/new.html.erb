@@ -1,0 +1,16 @@
+<h1>Bookings#new</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+      <h5>This is a new booking for rental <%= @rental.name %> </h5>
+      <%= render 'form' %>
+      <%= link_to 'Back', rental_path(@rental) %>
+    </div>
+    <div class="col-md-2">
+    </div>
+  </div>
+</div>
+
