@@ -68,6 +68,9 @@
           <%= @rental.address_country %>
         </p>
       </div>
+      <div class="check-av row">
+        <%= link_to 'Check availability', new_rental_booking_path(@rental), class:'btn' %>
+      </div>
     </div>
     <div class="col-md-2">
     </div>
