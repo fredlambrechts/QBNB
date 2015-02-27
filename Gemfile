@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 source 'https://rails-assets.org'
+
 ruby '2.2.0'
+
 gem "geocoder"
 gem "gmaps4rails"
 gem "rails-assets-underscore"
@@ -16,6 +18,7 @@ gem 'paperclip'
 gem 'figaro'
 gem 'faker'
 gem "letter_opener", group: :development
+gem 'activeadmin', git: 'https://github.com/activeadmin/activeadmin.git'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
