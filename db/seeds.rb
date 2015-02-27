@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-40.times do
+20.times do
   pw = "12345678"
   u = User.new(
     first_name: Faker::Name.first_name,
@@ -19,7 +19,7 @@
 end
 
 
-40.times do
+20.times do
   Rental.create(host_id: User.all.sample.id,
     name: Faker::Name.name,
     address_street: Faker::Address.street_name,
@@ -33,7 +33,7 @@ end
     description: Faker::Lorem.paragraph(2))
 end
 
-40.times do
+20.times do
   Booking.create(
     rental_id: Rental.all.sample.id,
     visitor_id: User.all.sample.id,
