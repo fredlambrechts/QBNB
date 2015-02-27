@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 ruby '2.2.0'
+gem "geocoder"
+gem "gmaps4rails"
+gem "rails-assets-underscore"
 gem 'simple_form', '~> 3.0.0.rc'
 gem 'font-awesome-sass'
 gem 'bootstrap-sass', '3.3.0.0'
