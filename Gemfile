@@ -12,6 +12,7 @@ gem 'paperclip'
 gem 'figaro'
 gem 'faker'
 gem "letter_opener", group: :development
+gem 'activeadmin', github: 'activeadmin'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'

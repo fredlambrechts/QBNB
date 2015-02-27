@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  ActiveAdmin.routes(self)
   devise_for :users, :controllers => { omniauth_callbacks: 'user/omniauth_callbacks' ,registrations: 'user/registrations' }
   resources :rentals do
     resources :bookings, except: [:index, :destroy]
