@@ -6,17 +6,30 @@ class RentalsController < ApplicationController
   def index
     if(params[:adress_city])
       @rentals = Rental.where(address_city: params[:adress_city])
+      @markers = Gmaps4rails.build_markers(@rentals) do |rental, marker|
+      marker.lat rental.latitude
+      marker.lng rental.longitude
+      end
     else
       # search_city = params[:adress_city]
       search_houses = params[:house]
       search_appts = params[:appt]
       @rentals = Rental.search(search_appts, search_houses)
+      @markers = Gmaps4rails.build_markers(@rentals) do |rental, marker|
+      marker.lat rental.latitude
+      marker.lng rental.longitude
+      end
     end
   end
 
   # GET /rentals/1
   # GET /rentals/1.json
   def show
+    @rental = Rental.find(params[:id])
+    @markers = Gmaps4rails.build_markers(@rental) do |rental, marker|
+    marker.lat rental.latitude
+    marker.lng rental.longitude
+    end
   end
 
   # GET /rentals/new
@@ -78,5 +91,5 @@ class RentalsController < ApplicationController
     def rental_params
       params.require(:rental).permit(:host_id, :name, :address_street, :address_number, :address_city, :address_country, :address_zip, :rental_type, :number_of_sleeps, :price_per_night, :description, :picture)
     end
-
 end
+

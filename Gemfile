@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
+
 ruby '2.2.0'
+
+gem "geocoder"
+gem "gmaps4rails"
+gem "rails-assets-underscore"
 gem 'simple_form', '~> 3.0.0.rc'
 gem 'font-awesome-sass'
 gem 'bootstrap-sass', '3.3.0.0'
@@ -12,7 +18,7 @@ gem 'paperclip'
 gem 'figaro'
 gem 'faker'
 gem "letter_opener", group: :development
-gem 'activeadmin', github: 'activeadmin'
+gem 'activeadmin', git: 'https://github.com/activeadmin/activeadmin.git'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'

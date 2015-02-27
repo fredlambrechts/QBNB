@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
     <title>QBNB</title>
     <!-- Toegevoegd uit boilerplate le wagon -->
@@ -18,6 +17,13 @@
     <%= render 'shared/notices' %>
 
       <%= yield %>
+
+
+
+    <%= javascript_include_tag "https://maps.google.com/maps/api/js?sensor=false" %>
+    <%= javascript_include_tag "https://google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js" %>
+    <%= javascript_include_tag 'application' %>
+    <%= yield(:after_js) %>
 
     <%= render 'shared/footer' %>
 
